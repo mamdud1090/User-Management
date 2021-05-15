@@ -1,0 +1,126 @@
+<div class="container">
+      <div class="row">
+          <div class="col-md-12 searchingPart">
+            <h1>Search Applicant Through: </h1>
+
+              <form name="myForm" action="{{ route('committeeEventSearching') }}" method="post" >
+
+                {{ csrf_field() }}
+
+                 <select class="form-control categoryEvent" name="inptSearchEvent" id="inptSearchEvent">
+                    <option value="">---Select an Event---</option>
+                  @foreach($events as $event)
+                    <option value="{{$event->id}}">{{$event->name}}</option>
+                  @endforeach
+                </select>
+
+                <select class="form-control" name="InptSearchCommittee" id="InptSearchCommittee">
+                    <option value="">---Select a Committee---</option>
+                   @foreach($committees as $committee)
+                    <option value="{{$committee->id}}">{{$committee->committee_name}}</option>
+                  @endforeach
+                </select>
+
+                <button class="btn btn-primary categorySearch">Search</button>
+                
+              </form>
+
+          </div>
+      </div>
+    </div>
+
+
+    <div id="profileImg"><img src="{{($userProfile)?URL::asset($userProfile->img_path):''}}" height="130" width="120">
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+})->name("baseUrl");
+
+Auth::routes();
+
+Route::match(['get', 'post'], '/home', 'HomeController@index')->name('home');
+
+Route::get('/update', 'ProfileController@editUser')->name('edit');
+
+Route::get('/event-fee/{event_id}/{registration_id}','PaymentController@eventFee')->name('eventFee');
+
+
+Route::post('/userprofile', 'ProfileController@insertUser')->name("userProfile");
+
+Route::post('/ ', 'ProfileController@admin')->name('adminProfile');
+
+Route::post('/commiitteeWiseUpload', 'AdminController@commiitteeWiseUpload')->name("committeeWiseUpload");
+
+
+Route::get('/events/{event}', 'EventController@event')->name('eventName');
+
+Route::post('/delegateRegistration', 'EventController@registration')->name('delegateRegistration');
+
+Route::get('/home','HomeController@index')->name('home');
+
+Route::get('/club-selection','EventController@club')->name('club-selection');
+Route::get('/admin-committee-input', 'AdminController@adminCommitteeInput')->name('admin-committee-input');
+
+Route::post('/insert-committee','AdminController@adminCommitteeInput')->name('insert-committee');
+Route::post('/insert-club','AdminController@insertClub')->name('insert-club');
+
+
+Route::get('/get-clubs-by-comm-event/{eventId}/{committeeId}','AdminController@getClubByCommNEvent')->name('getClubByCommNEvent');
+
+Route::get('/get-clubs-by-comm-user-event/{eventId}/{committeeId}','AdminController@getClubByCommUserEvent')->name('getClubByCommUserEvent');
+
+Route::get('/get-committee-by-user-event/{eventId}','AdminController@getCommitteeByUserEvent')->name('getCommitteeByUserEvent');
+
+
+Route::get('/admin/select-event','AdminController@eventSelection')->name('eventSelection');
+
+Route::get('/admin/event-committee/list/{event}','AdminController@clubCommitteeSelection')->name('club-n-committee-list');
+Route::post('/admin/event-committee/store','ClubncommitteeController@committeeClub')->name('clubNcommittee');
+
+
+Route::get('/admin/notice-upload','AdminController@noticeUpload')->name('admin-notice-upload');
+
+Route::get('/admin/committee/list','AdminController@committeeList')->name('admin-committee-list');
+
+
+Route::post('/admin/committee/store','AdminController@storeCommittee')->name('committeeCRUD');
+Route::post('/admin/club/store','AdminController@storeClub')->name('clubCRUD');
+
+
+Route::get('/admin/club/list','AdminController@clubList')->name('admin-club-list');
+
+Route::get('/committee-edit/{edit_id}', 'AdminController@editCommittee')->name('committee-edit');
+Route::get('/club-edit/{edit_id}', 'AdminController@editClub')->name('club-edit');
+
+
+Route::post('/admin/committee/update','AdminController@updateCommittee')->name('committee-update');
+Route::post('/admin/club/update','AdminController@updateClub')->name('club-update');
+
+
+Route::get('/committee-delete/{delete_id}', 'AdminController@deleteCommittee')->name('committee-delete');
+Route::get('/club-delete/{delete_id}', 'AdminController@deleteClub')->name('club-delete');
+
+// Route::post('/admin/committee-event-search','AdminController@committeeEventsearch')->name('committeeEventSearching');
+
+Route::post('/setup/my_ipn_listener','PaymentController@ipnListener')->name('ipnListener');
+
+Route::get('/setup/send-request','PaymentController@sendRequest')->name('sendRequest');
+
+Route::post('/user/payment','PaymentController@userPayment')->name('userPayment');
+
+Route::match(array('GET', 'POST'), '/payment/success','PaymentController@paymentSuccess')->name('paymentSuccess');
+Route::match(array('GET', 'POST'), '/payment/fail','PaymentController@paymentFail')->name('paymentFail');
+Route::match(array('GET', 'POST'), '/payment/cancel','PaymentController@paymentCancel')->name('paymentCancel');

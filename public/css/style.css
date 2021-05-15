@@ -1,0 +1,494 @@
+.bColor {
+	margin: 0;
+    padding: 0;
+    color: #555;
+    font: normal 10pt Arial,Helvetica,sans-serif;
+    background: #BEC3C6 url(bg.jpg) repeat-x top;
+}
+
+.clearfix, .container {
+    display: block;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
+.content {
+	margin-left: 19px;
+	margin-right: 19px;
+}
+
+.contentRegistration {
+	margin-left: 6px;
+}
+
+.contentLogin {
+	margin-left: 0px;
+}
+
+.contentdelegation {
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+.contentPayment {
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+.userDetailsHead {
+	width: 150px;
+	height: 35px;
+	background-color: #d1c8c8;
+	border-radius: 4px;
+	margin:0 auto;
+}
+
+.userUpdatePersonalInfo {
+	width: 260px;
+	height: 35px;
+	background-color: #d1c8c8;
+	border-radius: 4px;
+	margin: 0 auto;
+}
+
+.userUpdateAcademicInfo {
+	width: 220px;
+	height: 35px;
+	background-color: #d1c8c8;
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.userUpdateMedicalInfo {
+	width: 225px;
+	height: 35px;
+	background-color: #d1c8c8;
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.userEventRegistationInfo {
+	width: 470px;
+	height: 35px;
+	background-color: #d1c8c8;
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 33px;
+}
+
+.userDetailsHeadText {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 8px;
+}
+
+.userRegistationHeadText {
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 8px;
+}
+
+.loginDiv {
+	margin-left: 15px;
+}
+
+#page {
+	margin-top: 10px;
+    margin-bottom: 5px;
+    background: #ffffff;
+}
+
+#header {
+	margin: 0;
+    padding: 0;
+    border-top: 5px solid #A8001A;
+}
+
+#logo {
+	margin: 10px 20px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-variant: small-caps;
+    color: #601A1D;
+    font-size: 30px;
+}
+
+#profileImg {
+	margin: 13px 0px;
+	float: left; 
+}
+
+#profileImgTag {
+	float: left;
+    font-weight: bold;
+    margin-left: 2em;
+    font-size: 14px;
+    margin-top: 67px;
+    line-height: 27px;
+    color: #4c4c48;
+}
+
+
+a {
+    color: #2970A6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active { 
+    text-decoration: none;
+}
+
+#tag {
+	margin: 10px 20px;
+    font-family: Verdana, Arial, sans-serif;
+    margin-top: -10px;
+    font-size: 25px;
+    letter-spacing: -1px;
+    float: left;
+    margin-top: -36px;
+    margin-left: 102px;
+}
+
+
+.updateBtn {
+	float: right;
+	margin-top: -37px;
+	margin-right: 54px;
+	position: relative;
+	top: 60%;
+	transform: translateY(-60%);
+}
+
+.progressBar {
+	float: right;
+	margin-top: 40px;
+    margin-right: 181px;
+	position: relative;
+	border-radius: 50%;
+	border: 6px solid green;
+	width: 100px;
+	height: 100px;
+	background: white;
+}
+
+.progressBarText {
+	text-align: center;
+	margin-top: 24px;
+	font-size: 35px;
+    font-weight: bold;
+}
+
+.notificationBtn {
+	float: right;
+	margin-top: -57px;
+}
+
+.notification {
+	margin-top: -29px;
+    margin-left: -25px;
+    background-color: ;
+    color: #fbf9f9;
+}
+
+.clear {
+	clear: both;
+}
+
+.tophead {
+	height: 300px;
+	background-color: #826666;
+	/*margin-left: 45px;
+    margin-right: 45px;*/
+}
+
+.para1 {
+	font-size:12px;
+}
+
+.inputfield:focus {
+	outline: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid red;
+}
+
+.inputfield {
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: 1px solid gray;
+}
+
+.inputBoxWidth {
+	width: 60%;
+}
+
+.borderLess {
+	border: none;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 50%;
+    }
+}
+
+.date_underline {
+	border: none;
+	/*width: 40%;
+	border-bottom: 1px solid gray;*/
+}
+
+.committe {
+	border: none;
+	width: 50%;
+}
+
+.textareaUpdateProfile {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.textareaEvent1 {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.textareaEvent2 {
+  width: 100%;
+  height: 33px;
+  border-radius: 4px;
+}
+
+
+.eventBtn {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.actionButton{
+	width: 30%;
+	
+}
+
+
+.payBtn {
+	margin: 0 auto;
+	width: 55px;
+}
+
+.paymentTable {
+	margin-top: 30px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.paymentTableHead {
+	background-color: #5f605e;
+	color: white;
+	text-align: center;
+}
+
+.paymentTableBody {
+	background-color: #d4d6d1;
+	text-align: center;
+}
+
+
+.footer {
+  color: black;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#footer {
+	padding: 10px;
+    margin: 10px 20px;
+    font-size: 0.8em;
+    text-align: center;
+    border-top: 1px solid #ffcdb7;
+}
+
+.footerText {
+	margin-top: 5px;
+}
+
+.uploadBtn {
+  margin-left: 1px;
+  margin-top: 5px;
+}
+
+
+.payButtonContainer{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+
+.payButton{
+	width: 100%;
+}
+
+.adminHeader{
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.appName{
+	text-transform: uppercase; 
+	color: #c5c5c5;
+	font-size: 30px !important;
+}
+
+.siteTitle span{
+	color: red;
+	font-size: 200px !important;
+}
+.paymentStatus input{
+	width: 60px;
+	margin: 0 auto;
+	height: 13px;
+
+}
+
+/*input[type="checkbox"]:checked + span:before {
+  content: "\e067";    glyphicon checked 
+  color: #2196F3;
+}
+
+.checkbox label, .radio label {
+    padding-left: 0px;
+}*/
+
+.searchingPart{
+	margin-bottom: 5em;
+}
+
+.categorySearch{
+	margin-top: 2em;
+}
+
+.categoryEvent{
+	margin-bottom: 2em;
+}
+
+
+.searchingPart{
+	border: 2px solid #f0f0f0;
+	padding: 10px 10px;
+
+}
+
+.proceedSection{
+	margin : 0 auto;
+	margin-top: 40px;
+	width: 240px;
+	/*height: 100px;*/
+	background-color: #f0f0f0;
+}
+
+.proceedBtn{
+	float: left;
+	margin-right: 20px;
+	
+}
+
+.payLaterBtn{
+	float: left;
+}
+
+
+.dataTables_filter{
+	margin-top: 1em;
+}
+
+.dataTables_filter input  {     
+	width: 300px;     
+	outline : 1px solid #ccc;
+	border: none;
+}
+
+.infoMeter{
+	float: right;
+}
+
+
+
+				/*================== Hridoy's CSS ==================*/
+
+
+.adminSubmitBtn {
+ float: right;
+    width: 70px;
+    margin-left: 363px;
+    margin-top: 10px;
+}
+
+.adminAddNewBtn {
+ float: right;
+    width: 83px;
+    margin-top: 2px;
+}
+
+.tableHead {
+ text-align: center;
+}
+
+
+.addCommitteeInput input, .addClubInput input{
+	width: 100%;
+	height: 36px;
+	margin-left: 16px;
+}
+
+#admin-home-table
+{
+	float: left;
+	width: 100%;
+	display: block;
+}
+#hyd-app
+{
+	background: #fff;
+	width: 100%;
+	display: block;
+}
+

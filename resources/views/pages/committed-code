@@ -1,0 +1,5 @@
+ <!--  <select class="form-control" name="inptCountry">
+                @foreach($clubNames as $clubName)
+                      <option>{{$clubName->club_name}}</option>
+                 @endforeach
+                </select> -->
